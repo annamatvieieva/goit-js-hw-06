@@ -10,4 +10,4 @@ validationInput.addEventListener('blur', (event) => {
 	} else {
 		validationInput.classList.add('invalid');
 	}
-} )
+});

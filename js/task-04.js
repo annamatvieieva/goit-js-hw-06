@@ -4,11 +4,13 @@ const value = document.querySelector('#value');
 let counterValue = 0;
 
 decrement.addEventListener("click", (event) => {
+	event.preventDefault();
 	counterValue -= 1;
 	value.textContent = counterValue;
 })
 
 increment.addEventListener("click", (event) => {
+	event.preventDefault();
 	counterValue += 1;
 	value.textContent = counterValue;
 })
