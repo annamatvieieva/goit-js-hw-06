@@ -9,8 +9,13 @@ const ingredients = [
 
 const list = document.querySelector("#ingredients");
 
-const markup = ingredients
-  .map((ingredient) => `<li clas="item">${ingredient}</li>`)
-  .join("");
+const newListItems = ingredients.map((ingredient) => {
+ const newItem = document.createElement('li');
+     newItem.textContent = ingredient;
+  newItem.classList.add('item');
+  return newItem;
+})
 
-list.insertAdjacentHTML("afterbegin", markup);
+list.append(...newListItems);
+
+
